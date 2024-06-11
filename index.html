@@ -126,6 +126,54 @@
   </div>
 </section>
 
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Temporally localizing the presence of object states in videos is crucial in understanding
+              human activities beyond actions and objects. This task has suffered from a lack of training data due to object states' inherent ambiguity and variety. 
+            </p>
+            <p>
+                To avoid exhaustive annotation, learning from transcribed narrations in instructional videos would be intriguing. 
+                However, object states are less described in narrations 
+                compared to actions, making them less effective. 
+                In this work, we propose to extract the object state information from action information 
+                included in narrations, using large language models (LLMs). Our observation is that LLMs 
+                include world knowledge on the relationship between actions and their resulting 
+                object states, and can infer the presence of object states from past action sequences. 
+                The proposed LLM-based framework offers flexibility to generate plausible pseudo-object 
+                state labels against arbitrary categories. 
+            </p>
+            <p>
+                We evaluate our method with our newly collected Multiple Object States Transition (MOST) 
+                dataset including dense temporal annotation of 60 object state categories. 
+                Our model trained by the generated pseudo-labels demonstrates significant improvement of 
+                over 29% in mAP against strong zero-shot vision-language models, showing the effectiveness 
+                of explicitly extracting object state information from actions through LLMs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -146,11 +194,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Tateno, Masatoshi and Yagi, Takuma and Furuta, Ryosuke and Sato, Yoichi},
-  title     = {Learning Object States from Actions via Large Language Models},
-  journal   = {arXiv}
-  year      = {2024},
+    <pre><code>@article{tateno2024learning,
+title={Learning Object States from Actions via Large Language Models},
+author={Tateno, Masatoshi and Yagi, Takuma and Furuta, Ryosuke and Sato, Yoichi},
+journal={arXiv preprint arXiv:2405.01090},
+year={2024}
 }</code></pre>
   </div>
 </section>
