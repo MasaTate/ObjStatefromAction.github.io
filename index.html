@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Learning object states from actions via large language models.">
+        content="Learning multiple object states from actions via large language models.">
   <meta name="keywords" content="LLM, object states, actions">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Learning Object States from Actions via Large Language Models</title>
+  <title>Learning Multiple Object States from Actions via Large Language Models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src=""></script>
@@ -51,7 +51,7 @@
           <h1 class="title is-1 publication-title">Learning Object States from Actions via Large Language Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://masatate.github.io/">Masatoshi Tateno</a><sup>1</sup>,</span>
+              <a href="https://masatate.github.io/">Masatoshi Tateno</a><sup>1,2</sup>,</span>
             <span class="author-block">
               <a href="https://artilects.net/">Takuma Yagi</a><sup>2</sup>,</span>
             <span class="author-block">
@@ -108,6 +108,10 @@
   </div>
 </section>
 
+<div class="container is-max-desktop">
+  <p style="color: red;">Our paper has been accepted for WACV 2025 🎉</p>
+</div>
+
 <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
@@ -142,6 +146,22 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
+              Recognizing the states of objects in a video is crucial in understanding the scene beyond actions and objects.
+              For instance, an egg can be “raw,” “cracked,” and “whisked” while cooking an omelet, and these states can coexist simultaneously (an egg can be both “raw” and “whisked”).
+              However, most existing research assumes single object state change (e.g., uncracked to cracked), overlooking the coexisting nature of multiple object states and the influence of past states on the current state. 
+            </p>
+            <p>
+              We formulate object state recognition as a multi-label classification task that explicitly handles multiple states. We then propose to learn multiple object states from narrated videos by leveraging large language models (LLMs) to generate pseudo-labels from the transcribed narrations, capturing the influence of past states.
+              The challenge is that narrations mostly describe human actions in the video but rarely explain object states.
+              Therefore, we use LLMs’ knowledge of the relationship between actions and states to derive the missing object states.
+              We further accumulate the derived object states to consider the past state contexts to infer current object state pseudo-labels. 
+            </p>
+            <p>
+              We newly collect the Multiple Object States Transition (MOST) dataset, which includes manual multi-label annotation for evaluation purposes, covering 60 object states across six object categories.
+              Experimental results show that our model trained on LLM-generated pseudo-labels significantly outperforms strong vision-language models, demonstrating the effectiveness of our pseudo-labeling framework that considers past context via LLMs.
+            </p>
+
+            <!-- <p>
               Temporally localizing the presence of object states in videos is crucial in understanding
               human activities beyond actions and objects. This task has suffered from a lack of training data due to object states' inherent ambiguity and variety. 
             </p>
@@ -162,7 +182,9 @@
                 Our model trained by the generated pseudo-labels demonstrates significant improvement of 
                 over 29% in mAP against strong zero-shot vision-language models, showing the effectiveness 
                 of explicitly extracting object state information from actions through LLMs.
-            </p>
+            </p> -->
+
+
           </div>
         </div>
     </div>
